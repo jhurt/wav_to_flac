@@ -4,7 +4,7 @@ Open Source under the BSD license, see LICENSE.txt for details.
 
 To use in your project: 
 
-1. Compile libFLAC for your architecture, include it in your project.
+1. Build and include FLACiOS framework in your project: https://github.com/jhurt/FLACiOS 
 2. In your Objective C class:
 
 #include "wav_to_flac.h"
@@ -16,3 +16,4 @@ const char *flac_file = [flacFile UTF8String];
 int conversionResult = convertWavToFlac(wave_file, flac_file);
 
 //do something with the file
+

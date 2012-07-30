@@ -10,8 +10,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "metadata.h"
-#include "stream_encoder.h"
+#include "FLACiOS/metadata.h"
+#include "FLACiOS/stream_encoder.h"
 
 static void progress_callback(const FLAC__StreamEncoder *encoder, FLAC__uint64 bytes_written, FLAC__uint64 samples_written, unsigned frames_written, unsigned total_frames_estimate, void *client_data);
 
