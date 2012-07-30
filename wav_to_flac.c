@@ -97,7 +97,7 @@ int convertWavToFlac(const char *wave_file_in, const char *flac_file_out) {
                 pcm[i] = (FLAC__int32)(((FLAC__int16)(FLAC__int8)buffer[2*i+1] << 8) | (FLAC__int16)buffer[2*i]);
             }
             /* feed samples to encoder */
-            ok = FLAC__stream_encoder_process_interleaved(encoder, pcm, need);
+            ok = FLAC__stream_encoder_process_interleaved(encoder, pcm, bytes_read);
 		}
 	}
     
@@ -115,5 +115,5 @@ int convertWavToFlac(const char *wave_file_in, const char *flac_file_out) {
 }
 
 void progress_callback(const FLAC__StreamEncoder *encoder, FLAC__uint64 bytes_written, FLAC__uint64 samples_written, unsigned frames_written, unsigned total_frames_estimate, void *client_data) {
-	fprintf(stderr, "wrote %llu bytes\n", bytes_written);
+	//fprintf(stderr, "wrote %llu bytes\n", bytes_written);
 }
